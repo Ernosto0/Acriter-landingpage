@@ -1,0 +1,143 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
+:root {
+    --primary-color: #0B1A2F;
+    --content-color: #EAE3D2;
+    --accent-color: #8C8C8C;
+}
+
+/* Add animated background gradient */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Add floating animation for shapes */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Add shine effect animation */
+@keyframes shine {
+    0% { background-position: -100% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.gradient-bg {
+    background: linear-gradient(-45deg, #0B1A2F, #1a3b6d, #2c4975, #0B1A2F);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+.floating-shape {
+    position: absolute;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shine-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-effect::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shine 3s infinite linear;
+}
+
+/* Typography Classes */
+.font-brand { font-family: 'Neue Haas Grotesk Display Pro', sans-serif; font-weight: 700; }
+.font-heading { font-family: 'Inter', sans-serif; font-weight: 600; }
+.font-subheading { font-family: 'Inter', sans-serif; font-weight: 500; }
+.font-body { font-family: 'Inter', sans-serif; font-weight: 400; }
+.font-helper { font-family: 'IBM Plex Sans', sans-serif; font-weight: 300; }
+
+/* Enhanced button styles */
+.btn-primary {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    left: 0;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 227, 210, 0.2);
+}
+
+/* Card hover effects */
+.hover-card {
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--content-color);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Message Animation */
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+.message-animation {
+    animation: slideDown 0.5s ease-out;
+}
+
+/* Loading State */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Form Focus States */
+.form-input:focus {
+    box-shadow: 0 0 0 2px rgba(234, 227, 210, 0.2);
+} 

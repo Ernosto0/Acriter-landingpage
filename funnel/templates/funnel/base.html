@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Funnel Page{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Add required fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/[YOUR-KIT-CODE].css"> <!-- For Neue Haas Grotesk -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500&family=IBM+Plex+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0B1A2F;
+            --content-color: #EAE3D2;
+            --accent-color: #8C8C8C;
+        }
+        body {
+            background-color: var(--primary-color);
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2 {
+            font-family: 'Suisse Int\'l', 'Inter', sans-serif;
+            font-weight: 600;
+        }
+        h3, h4 {
+            font-family: 'Akkurat', 'Inter', sans-serif;
+            font-weight: 500;
+        }
+        .helper-text {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 300;
+        }
+        .cta-button {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="min-h-screen">
+    {% block header %}{% endblock %}
+    <div class="container mx-auto px-4 py-8">
+        {% if messages %}
+        <div class="fixed top-4 right-4 z-50">
+            {% for message in messages %}
+            <div class="bg-content-color text-primary-color px-6 py-4 rounded-lg shadow-lg mb-4 animate-fade-in-down">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% block footer %}{% endblock %}
+</body>
+</html> 
