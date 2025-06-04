@@ -8,8 +8,7 @@ from django.contrib import messages
 def landing_page(request):
     if request.method == 'POST':
         email = request.POST.get('email')
-        # Here you would typically save the email to your database
-        # For now, we'll just add a success message
+       
         messages.success(request, 'Thank you for your interest! We\'ll be in touch soon.')
         return HttpResponseRedirect(reverse('landing_page'))
     
