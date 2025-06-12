@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AICORE - Leading AI consulting firm helping enterprises achieve digital transformation with custom AI solutions. Get 40% efficiency gains in 12 months.">
+    <meta name="description" content="Acriter - Leading AI consulting firm helping enterprises achieve digital transformation with custom AI solutions. Get 40% efficiency gains in 12 months.">
     <meta name="keywords" content="AI consulting, enterprise AI, digital transformation, AI solutions">
-    <title>AI Enterprise Solutions | Leading AI Consulting | AICORE</title>
+    <title>AI Enterprise Solutions | Leading AI Consulting | Acriter</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Adobe Fonts (for Neue Haas Grotesk, Suisse Int'l, and Akkurat) -->
-    <link rel="stylesheet" href="https://use.typekit.net/[YOUR-KIT-CODE].css">
+    <!-- Adobe Fonts (for Neue Haas Grotesk) -->
+    <link rel="stylesheet" href="https://use.typekit.net/nkj3tjs.css">
+    <style>
+        .font-neue-haas {
+            font-family: neue-haas-grotesk-display, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
     <!-- Google Fonts - Optimized Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,10 +58,10 @@
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4">
-                    <div class="text-4xl font-brand tracking-tight">AICORE</div>
                     <div class="font-brand">
-                        <img src="{% static 'image/logo.PNG' %}" alt="AICORE Logo" class="h-16 md:h-20">
+                        <img src="{% static 'image/logo.PNG' %}" alt="Acriter Logo" class="h-24 md:h-28">
                     </div>
+                    <div class="text-5xl font-neue-haas tracking-tight">ACRITER</div>
                 </div>
                 <button class="btn-primary bg-transparent border-2 border-accent text-content px-6 py-2 rounded-lg hover:bg-accent/10 transition-all">
                     Contact Us
@@ -86,14 +93,13 @@
         <div class="container mx-auto px-4 relative">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-5xl md:text-7xl font-heading mb-6 leading-tight shine-effect" data-aos="fade-up">
-                    Strategic AI Solutions to Transform Your Enterprise
+                    Üretiminize Özel Yapay Zekâ Stratejileriyle Fark Yaratın
                 </h1>
                 <p class="text-xl md:text-2xl text-accent mb-12 font-subheading max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                    Tailored AI solutions backed by proven expertise in enterprise digital transformation. 
-                    Achieve 40% efficiency gains within 12 months.
+                    Acriter, her firmanın süreçlerine özel olarak geliştirilmiş yapay zekâ modelleriyle üretim verimliliğinizi %40'a kadar artırır.
                 </p>
                 <button class="btn-primary bg-content text-primary px-8 py-4 rounded-lg text-lg" data-aos="fade-up" data-aos-delay="200">
-                    Schedule Your Free Consultation
+                    Ücretsiz Danışmanlık Planla
                 </button>
             </div>
         </div>
@@ -104,7 +110,11 @@
         <!-- Key Benefits Section -->
         <section class="py-20 bg-primary/50">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-heading mb-16 text-center" data-aos="fade-up">Why Choose AICORE?</h2>
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <p class="text-xl text-accent font-body" data-aos="fade-up">
+                        Süreçleriniz size özgü. Çözümleriniz de öyle olmalı. Acriter, hazır algoritmalar değil; firmanızın veri yapısına, operasyonel ihtiyaçlarına ve büyüme hedeflerine özel yapay zekâ stratejileri tasarlar.
+                    </p>
+                </div>
                 <div class="grid md:grid-cols-3 gap-8 mb-24">
                     <div class="hover-card bg-primary p-8 rounded-xl border border-accent/20 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
                         <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -112,8 +122,8 @@
                             <div class="text-4xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
                                 <img src="{% static 'image/rocket.png' %}" alt="Rocket" class="w-10 h-10 inline-block">
                             </div>
-                            <h3 class="text-xl font-subheading mb-4 group-hover:text-content/90">Rapid Implementation</h3>
-                            <p class="text-accent font-body group-hover:text-accent/90">From concept to deployment in 90 days. Our proven methodology ensures quick wins and sustainable long-term success.</p>
+                            <h3 class="text-xl font-subheading mb-4 group-hover:text-content/90">Kuruma Özel AI Modelleme</h3>
+                            <p class="text-accent font-body group-hover:text-accent/90">Her üretim hattı, her veri akışı ve her yönetim biçimi farklıdır. Biz algoritmaları değil, sizi okuruz.</p>
                         </div>
                     </div>
                     <div class="hover-card bg-primary p-8 rounded-xl border border-accent/20 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
@@ -121,10 +131,9 @@
                         <div class="relative z-10">
                             <div class="text-4xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
                                 <img src="{% static 'image/target.png' %}" alt="Target" class="w-10 h-10 inline-block">
-
                             </div>
-                            <h3 class="text-xl font-subheading mb-4 group-hover:text-content/90">Tailored Solutions</h3>
-                            <p class="text-accent font-body group-hover:text-accent/90">Custom AI strategies aligned with your business goals. No one-size-fits-all approaches.</p>
+                            <h3 class="text-xl font-subheading mb-4 group-hover:text-content/90">Uygulanabilir Strateji + Teknik Planlama</h3>
+                            <p class="text-accent font-body group-hover:text-accent/90">Danışmanlıkla kalmayız; hangi model, nasıl bir veri, hangi sistemde ne zaman çalışmalı — hepsini belirleriz.</p>
                         </div>
                     </div>
                     <div class="hover-card bg-primary p-8 rounded-xl border border-accent/20 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
@@ -132,10 +141,9 @@
                         <div class="relative z-10">
                             <div class="text-4xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
                                 <img src="{% static 'image/bulb.png' %}" alt="Bulb" class="w-10 h-10 inline-block">
-
                             </div>
-                            <h3 class="text-xl font-subheading mb-4 group-hover:text-content/90">Industry Expertise</h3>
-                            <p class="text-accent font-body group-hover:text-accent/90">20+ years of combined experience in AI implementation across Fortune 500 companies.</p>
+                            <h3 class="text-xl font-subheading mb-4 group-hover:text-content/90">Tek Merkezden Tüm Dönüşüm</h3>
+                            <p class="text-accent font-body group-hover:text-accent/90">Analiz, strateji, sistem planı ve sonuç takibi. Hepsi Acriter çatısında, size özel bir mühendislik anlayışıyla yönetilir.</p>
                         </div>
                     </div>
                 </div>
@@ -145,37 +153,45 @@
         <!-- Process Section -->
         <section class="py-15">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-heading mb-16 text-center" data-aos="fade-up">Our Proven Process</h2>
-                <div class="grid md:grid-cols-4 gap-8">
+                <h2 class="text-3xl md:text-4xl font-heading mb-16 text-center" data-aos="fade-up">Danışmanlık Sürecimiz</h2>
+                <div class="grid md:grid-cols-5 gap-8">
                     <div class="relative" data-aos="fade-up" data-aos-delay="100">
                         <div class="bg-primary p-8 rounded-xl border border-accent/20 h-full">
                             <div class="text-4xl mb-6">1</div>
-                            <h3 class="text-xl font-subheading mb-4">Discovery</h3>
-                            <p class="text-accent font-body">We analyze your business needs and identify AI opportunities.</p>
+                            <h3 class="text-xl font-subheading mb-4">Süreç ve Veri Keşfi</h3>
+                            <p class="text-accent font-body">Firmanıza özel dinamikleri analiz ediyoruz</p>
                         </div>
                         <div class="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-accent/20">→</div>
                     </div>
                     <div class="relative" data-aos="fade-up" data-aos-delay="200">
                         <div class="bg-primary p-8 rounded-xl border border-accent/20 h-full">
                             <div class="text-4xl mb-6">2</div>
-                            <h3 class="text-xl font-subheading mb-4">Strategy</h3>
-                            <p class="text-accent font-body">We develop a tailored AI implementation roadmap.</p>
+                            <h3 class="text-xl font-subheading mb-4">Modelleme ve Kapsam Tanımı</h3>
+                            <p class="text-accent font-body">Özgün veri yapınıza özel AI modeli tasarımı</p>
                         </div>
                         <div class="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-accent/20">→</div>
                     </div>
                     <div class="relative" data-aos="fade-up" data-aos-delay="300">
                         <div class="bg-primary p-8 rounded-xl border border-accent/20 h-full">
                             <div class="text-4xl mb-6">3</div>
-                            <h3 class="text-xl font-subheading mb-4">Implementation</h3>
-                            <p class="text-accent font-body">We deploy and integrate AI solutions seamlessly.</p>
+                            <h3 class="text-xl font-subheading mb-4">Strateji Geliştirme</h3>
+                            <p class="text-accent font-body">Uygulama adımları, veri gereksinimleri, KPI hedefleri</p>
                         </div>
                         <div class="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-accent/20">→</div>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative" data-aos="fade-up" data-aos-delay="400">
                         <div class="bg-primary p-8 rounded-xl border border-accent/20 h-full">
                             <div class="text-4xl mb-6">4</div>
-                            <h3 class="text-xl font-subheading mb-4">Optimization</h3>
-                            <p class="text-accent font-body">We continuously monitor and improve performance.</p>
+                            <h3 class="text-xl font-subheading mb-4">Teknik Entegrasyon Planı</h3>
+                            <p class="text-accent font-body">Nerede, ne zaman, nasıl? Detaylı yol haritası</p>
+                        </div>
+                        <div class="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-accent/20">→</div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="500">
+                        <div class="bg-primary p-8 rounded-xl border border-accent/20 h-full">
+                            <div class="text-4xl mb-6">5</div>
+                            <h3 class="text-xl font-subheading mb-4">Performans İzleme ve İyileştirme</h3>
+                            <p class="text-accent font-body">Etkiyi ölçer, modele geri besleme yaparız</p>
                         </div>
                     </div>
                 </div>
@@ -185,18 +201,22 @@
         <!-- Stats Section -->
         <section class="py-20 bg-primary/30">
             <div class="container mx-auto px-4">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-heading mb-6"> Hazır çözümlerle değil, size özgü modellerle sonuç alırsınız.</h2>
+                    <p class="text-xl text-accent">Her işletme kendine özeldir. Sadece buna saygı duyan sistemler sürdürülebilir fayda sağlar.</p>
+                </div>
                 <div class="grid md:grid-cols-3 gap-12" data-aos="fade-up">
                     <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-heading mb-4">40%</div>
-                        <p class="text-accent">Average Efficiency Gain</p>
+                        <div class="text-4xl md:text-5xl font-heading mb-4">%40</div>
+                        <p class="text-accent">Verimlilik Artışı</p>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-heading mb-4">90+</div>
-                        <p class="text-accent">Enterprise Clients</p>
+                        <div class="text-4xl md:text-5xl font-heading mb-4">100+</div>
+                        <p class="text-accent">Özel Model Geliştirme Deneyimi</p>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-heading mb-4">12mo</div>
-                        <p class="text-accent">Average ROI Timeline</p>
+                        <div class="text-4xl md:text-5xl font-heading mb-4">12 ay</div>
+                        <p class="text-accent">İçinde Ölçülebilir Sonuçlar</p>
                     </div>
                 </div>
             </div>
@@ -209,18 +229,20 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-primary p-8 rounded-xl border border-accent/20" data-aos="fade-up" data-aos-delay="100">
                         <div class="text-4xl mb-6">🏢</div>
-                        <h3 class="text-xl font-subheading mb-4">Financial Services</h3>
-                        <p class="text-accent font-body">Automated risk assessment, fraud detection, and personalized banking solutions.</p>
+                        <h3 class="text-xl font-subheading mb-4">Makine ve Ekipman İmalat</h3>
+                        <p class="text-accent font-body">Veri temelli kestirimci bakım, arıza önleme sistemleri, üretim hızı optimizasyonu.</p>
                     </div>
                     <div class="bg-primary p-8 rounded-xl border border-accent/20" data-aos="fade-up" data-aos-delay="200">
                         <div class="text-4xl mb-6">🏥</div>
-                        <h3 class="text-xl font-subheading mb-4">Healthcare</h3>
-                        <p class="text-accent font-body">Diagnostic assistance, patient care optimization, and operational efficiency.</p>
+                        <h3 class="text-xl font-subheading mb-4">Otomotiv Yan Sanayi</h3>
+                        <p class="text-accent font-body">
+                            Tedarik zinciri öngörüsü, kalite kontrol analitiği, iş gücü planlaması.
+                            </p>
                     </div>
                     <div class="bg-primary p-8 rounded-xl border border-accent/20" data-aos="fade-up" data-aos-delay="300">
                         <div class="text-4xl mb-6">🏭</div>
-                        <h3 class="text-xl font-subheading mb-4">Manufacturing</h3>
-                        <p class="text-accent font-body">Predictive maintenance, quality control, and supply chain optimization.</p>
+                        <h3 class="text-xl font-subheading mb-4">Ağır Sanayi ve Savunma</h3>
+                        <p class="text-accent font-body">Kaynak optimizasyonu, üretim hattı senkronizasyonu, yüksek riskli süreçlerde yapay zekâ destekli karar alma.</p>
                     </div>
                 </div>
             </div>
@@ -239,7 +261,8 @@
                     </button>
                 </div>
             </div>
-        </section>
+        </section>                      
+
 
         <!-- Social Proof Section -->
         <section class="py-20">
@@ -247,63 +270,70 @@
                 <h2 class="text-3xl md:text-4xl font-heading mb-16 text-center">Trusted by Industry Leaders</h2>
                 
                 <!-- Client Logos -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+                <div class="grid grid-cols-2 gap-6 mb-15">
                     <div class="flex items-center justify-center p-6 bg-primary/50 rounded-lg">
-                        <div class="text-accent/60 font-helper text-lg">Client Logo</div>
+                        <div class="flex flex-col items-center">
+                            <a href="https://www.hemtech.com.tr" class="flex flex-col items-center">
+                                <img src="{% static 'image/hemtech.PNG' %}" alt="Hemtech Logo" class="h-24 md:h-28 mb-3">
+                                <span class="text-content font-neue-haas text-3xl mt-2">HEMTECH</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="flex items-center justify-center p-6 bg-primary/50 rounded-lg">
-                        <div class="text-accent/60 font-helper text-lg">Client Logo</div>
-                    </div>
-                    <div class="flex items-center justify-center p-6 bg-primary/50 rounded-lg">
-                        <div class="text-accent/60 font-helper text-lg">Client Logo</div>
-                    </div>
-                    <div class="flex items-center justify-center p-6 bg-primary/50 rounded-lg">
-                        <div class="text-accent/60 font-helper text-lg">Client Logo</div>
+                        <div class="flex flex-col items-center">
+                            <a href="https://www.kbyazilim.com.tr" class="flex flex-col items-center">
+                                <img src="{% static 'image/kbyazilim.PNG' %}" alt="KB Yazılım Logo" class="h-24 md:h-28 mb-3">
+                                <span class="text-content font-neue-haas text-3xl mt-2">KB GROUP</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                    
+                </div>
+                
+            </div>
 
-                <!-- Testimonials -->
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="hover-card bg-primary p-8 rounded-xl border border-accent/20 relative group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="absolute top-0 right-0 w-20 h-20 bg-accent/5 rounded-bl-3xl"></div>
-                        <div class="absolute bottom-0 left-0 w-16 h-16 bg-accent/5 rounded-tr-2xl"></div>
-                        <div class="relative">
-                            <svg class="w-12 h-12 text-accent/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                            </svg>
-                            <p class="text-lg mb-6 font-body italic text-content/90">"AICORE transformed our operations with their AI solutions. We've seen a 45% increase in efficiency and significant cost savings."</p>
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">SJ</div>
-                                <div>
-                                    <p class="font-subheading">Sarah Johnson</p>
-                                    <p class="text-accent font-helper">CTO, Fortune 500 Company</p>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center">
-                                        <span class="text-xs text-accent/60">COMPANY LOGO</span>
-                                    </div>
+            <!-- Testimonials -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="hover-card bg-primary p-8 rounded-xl border border-accent/20 relative group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-accent/5 rounded-bl-3xl"></div>
+                    <div class="absolute bottom-0 left-0 w-16 h-16 bg-accent/5 rounded-tr-2xl"></div>
+                    <div class="relative">
+                        <svg class="w-12 h-12 text-accent/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                        <p class="text-lg mb-6 font-body italic text-content/90">"Acriter transformed our operations with their AI solutions. We've seen a 45% increase in efficiency and significant cost savings."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">SJ</div>
+                            <div>
+                                <p class="font-subheading">Sarah Johnson</p>
+                                <p class="text-accent font-helper">CTO, Fortune 500 Company</p>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center">
+                                    <span class="text-xs text-accent/60">COMPANY LOGO</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hover-card bg-primary p-8 rounded-xl border border-accent/20 relative group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="absolute top-0 right-0 w-20 h-20 bg-accent/5 rounded-bl-3xl"></div>
-                        <div class="absolute bottom-0 left-0 w-16 h-16 bg-accent/5 rounded-tr-2xl"></div>
-                        <div class="relative">
-                            <svg class="w-12 h-12 text-accent/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                            </svg>
-                            <p class="text-lg mb-6 font-body italic text-content/90">"The expertise and professionalism of the AICORE team are unmatched. They delivered beyond our expectations."</p>
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold">MC</div>
-                                <div>
-                                    <p class="font-subheading">Michael Chen</p>
-                                    <p class="text-accent font-helper">Director of Innovation, Global Tech Corp</p>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center">
-                                        <span class="text-xs text-accent/60">COMPANY LOGO</span>
-                                    </div>
+                </div>
+                <div class="hover-card bg-primary p-8 rounded-xl border border-accent/20 relative group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-accent/5 rounded-bl-3xl"></div>
+                    <div class="absolute bottom-0 left-0 w-16 h-16 bg-accent/5 rounded-tr-2xl"></div>
+                    <div class="relative">
+                        <svg class="w-12 h-12 text-accent/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                        <p class="text-lg mb-6 font-body italic text-content/90">"The expertise and professionalism of the Acriter team are unmatched. They delivered beyond our expectations."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold">MC</div>
+                            <div>
+                                <p class="font-subheading">Michael Chen</p>
+                                <p class="text-accent font-helper">Director of Innovation, Global Tech Corp</p>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center">
+                                    <span class="text-xs text-accent/60">COMPANY LOGO</span>
                                 </div>
                             </div>
                         </div>
@@ -365,19 +395,11 @@
     <!-- FAQ Section -->
         <section class="py-20 bg-primary/30">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-heading mb-16 text-center" data-aos="fade-up">Frequently Asked Questions</h2>
+                <h2 class="text-3xl md:text-4xl font-heading mb-16 text-center" data-aos="fade-up">Sık Sorulan Sorular</h2>
                 <div class="max-w-3xl mx-auto space-y-6">
                     <div class="bg-primary p-6 rounded-xl border border-accent/20" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-xl font-subheading mb-4">How long does implementation typically take?</h3>
-                        <p class="text-accent font-body">Our typical implementation timeline is 90 days from initial assessment to full deployment, with initial results visible within the first month.</p>
-                    </div>
-                    <div class="bg-primary p-6 rounded-xl border border-accent/20" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="text-xl font-subheading mb-4">What kind of ROI can we expect?</h3>
-                        <p class="text-accent font-body">Our clients typically see a 40% increase in operational efficiency within 12 months, with some achieving ROI in as little as 6 months.</p>
-                    </div>
-                    <div class="bg-primary p-6 rounded-xl border border-accent/20" data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="text-xl font-subheading mb-4">How do you ensure data security?</h3>
-                        <p class="text-accent font-body">We implement enterprise-grade security measures and comply with all major data protection regulations including GDPR, HIPAA, and SOC 2.</p>
+                        <h3 class="text-xl font-subheading mb-4">Aynı sektördeyiz, neden her firmaya özel model gerekiyor?</h3>
+                        <p class="text-accent font-body">Çünkü aynı sektörde bile üretim altyapısı, veri formatı, karar yapısı, ekip alışkanlıkları farklıdır. Biz bu farklılığı analiz ederek ona özel bir modelleme sunarız. Size benzeyen değil, sizi yansıtan çözümler geliştiririz.</p>
                     </div>
                 </div>
             </div>
@@ -433,7 +455,7 @@
             </a>
 
             <!-- Email -->
-            <a href="mailto:contact@aicore.com" class="flex items-center gap-3 p-4 hover:bg-content/5 transition-colors rounded-b-lg border-t border-accent/10">
+            <a href="mailto:contact@Acriter.com" class="flex items-center gap-3 p-4 hover:bg-content/5 transition-colors rounded-b-lg border-t border-accent/10">
                 <div class="w-10 h-10 bg-content/10 rounded-full flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-content" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -441,7 +463,7 @@
                 </div>
                 <div>
                     <div class="font-subheading text-content">Email Us</div>
-                    <div class="text-sm text-accent">contact@aicore.com</div>
+                    <div class="text-sm text-accent">contact@acriter.com</div>
                 </div>
             </a>
         </div>
@@ -450,7 +472,7 @@
     <!-- Footer with Enhanced Links -->
     <footer class="container mx-auto px-4 py-8 mt-16 border-t border-accent/20">
         <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-accent mb-4 md:mb-0 font-helper">&copy; 2025 AICORE. All rights reserved.</p>
+            <p class="text-accent mb-4 md:mb-0 font-helper">&copy; 2025 Acriter. All rights reserved.</p>
             <div class="flex gap-8">
                 <a href="#" class="text-accent hover:text-content transition-colors font-helper hover:underline">Privacy</a>
                 <a href="#" class="text-accent hover:text-content transition-colors font-helper hover:underline">Terms</a>
