@@ -13,6 +13,33 @@
     100% { background-position: 0% 50%; }
 }
 
+
+
+/* Add multiple shooting stars animation */
+@keyframes shootingStar2 {
+    0% {
+        transform: translateX(0%) translateY(-100%) rotate(45deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(300%) translateY(200%) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Add diagonal lines animation */
+@keyframes diagonalMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
 /* Add floating animation for shapes */
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -26,11 +53,6 @@
     100% { background-position: 200% 50%; }
 }
 
-.gradient-bg {
-    background: linear-gradient(-45deg, #0B1A2F, #1a3b6d, #2c4975, #0B1A2F);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
-}
 
 .floating-shape {
     position: absolute;
@@ -114,6 +136,72 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--primary-color);
     color: var(--content-color);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Main background effects */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(234, 227, 210, 0.03) 0px,
+        rgba(234, 227, 210, 0.03) 1px,
+        transparent 1px,
+        transparent 20px
+    );
+    animation: diagonalMove 8s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* First shooting star */
+body::after {
+    content: '';
+    position: fixed;
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+    animation: shootingStar 8s linear infinite;
+    animation-delay: 0s;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    z-index: -1;
+}
+
+/* Additional shooting stars */
+.shooting-star {
+    position: fixed;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+    animation: shootingStar2 12s linear infinite;
+    animation-delay: 4s;
+    top: 30%;
+    left: 0;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(255,255,255,0.4);
+    z-index: -1;
+}
+
+.shooting-star:nth-child(2) {
+    animation-delay: 6s;
+    top: 60%;
+    width: 80px;
+}
+
+.shooting-star:nth-child(3) {
+    animation-delay: 2s;
+    top: 80%;
+    width: 120px;
 }
 
 /* Smooth Scroll */
