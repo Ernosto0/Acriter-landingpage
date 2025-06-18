@@ -1,0 +1,231 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
+:root {
+    --primary-color: #0B1A2F;
+    --content-color: #EAE3D2;
+    --accent-color: #8C8C8C;
+}
+
+/* Add animated background gradient */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+/* Add multiple shooting stars animation */
+@keyframes shootingStar2 {
+    0% {
+        transform: translateX(0%) translateY(-100%) rotate(45deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(300%) translateY(200%) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Add diagonal lines animation */
+@keyframes diagonalMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+/* Add floating animation for shapes */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Add shine effect animation */
+@keyframes shine {
+    0% { background-position: -100% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+
+.floating-shape {
+    position: absolute;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shine-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-effect::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shine 3s infinite linear;
+}
+
+/* Typography Classes */
+.font-brand { font-family: 'Neue Haas Grotesk Display Pro', sans-serif; font-weight: 700; }
+.font-heading { font-family: 'Inter', sans-serif; font-weight: 600; }
+.font-subheading { font-family: 'Inter', sans-serif; font-weight: 500; }
+.font-body { font-family: 'Inter', sans-serif; font-weight: 400; }
+.font-helper { font-family: 'IBM Plex Sans', sans-serif; font-weight: 300; }
+
+/* Enhanced button styles */
+.btn-primary {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    left: 0;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 227, 210, 0.2);
+}
+
+/* Card hover effects */
+.hover-card {
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--content-color);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Main background effects */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(234, 227, 210, 0.03) 0px,
+        rgba(234, 227, 210, 0.03) 1px,
+        transparent 1px,
+        transparent 20px
+    );
+    animation: diagonalMove 8s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* First shooting star */
+body::after {
+    content: '';
+    position: fixed;
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+    animation: shootingStar 8s linear infinite;
+    animation-delay: 0s;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    z-index: -1;
+}
+
+/* Additional shooting stars */
+.shooting-star {
+    position: fixed;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+    animation: shootingStar2 12s linear infinite;
+    animation-delay: 4s;
+    top: 30%;
+    left: 0;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(255,255,255,0.4);
+    z-index: -1;
+}
+
+.shooting-star:nth-child(2) {
+    animation-delay: 6s;
+    top: 60%;
+    width: 80px;
+}
+
+.shooting-star:nth-child(3) {
+    animation-delay: 2s;
+    top: 80%;
+    width: 120px;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Message Animation */
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+.message-animation {
+    animation: slideDown 0.5s ease-out;
+}
+
+/* Loading State */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Form Focus States */
+.form-input:focus {
+    box-shadow: 0 0 0 2px rgba(234, 227, 210, 0.2);
+} 
