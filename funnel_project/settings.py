@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&o#$-=%7&hoj^#7b$xowv7k_7uplb83wa6weofi@pe97c9yel+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['acriter-landingpage-production.up.railway.app']
 
 
 # Application definition
